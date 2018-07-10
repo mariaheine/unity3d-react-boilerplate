@@ -44,14 +44,15 @@ Your `package.json` should look something like this (no babel, no webpack :see_n
 
 #### 2. Build Unity project for WebGL
 
- Make sure you set your project build to something as follows
- Pay special attention to:
+:new_moon: Your build settings should look something like on the picture below, please pay special attention to:
  - Setting build platform for WebGL
  - () WebGL Memory Size
  - (todo, write more) Compression Format
- - (same?) WebAssembly
+ - (same?) WebAssembly (since Unity 2018.1 its no longer considered 'experimental' :unicorn:)
 
 ![nay who needs image descriptions](https://lh3.googleusercontent.com/pGRf6tiQlR2MT5rdERBieRW8vbRqd8d_HDEuoHyIMY7Y6EhnmedZJlnFEfnrdqpIh2JgIrFn61Fu "asd")
 
-
+:mag_right: You should be most interested with the build folder containing those files:
+![enter image description here](https://lh3.googleusercontent.com/8RPc5jCsz49qIKGjSb-6uhIqgycsVlguKvMGjzH7A9oLtbJVgtU99vhz09ZLy7xVNVuHL3bXIm5Y "cool stuff")
+You could most certainly use a better build name.
 > Written with [StackEdit](https://stackedit.io/).
