@@ -11,16 +11,18 @@ Prepare an easy to use boilerplate for Unity WebGL builds in react. Which also s
 
 ## How to recreate
 #### 1. Initial project setup
-:milky_way: Follow this repo: [Heroku Buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack)
+:milky_way: Follow the *Quick Start* on this repo: [Heroku Buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack)
  With just a few easy steps  you end with a static, frontend-only web site hosted on Heroku.
  Easygoing heroku buildpack, look through it's readme, interesting stuff.
 
-Simple site updating with commiting and pushing changes to heroku remote(?):
+To update the site by pushing changes to heroku remote(?):
 
     $ git push heroku master
-Opening the website:
+To open it:
 
     $ heroku open
+
+> Wait what?? And just like that I have hosted a webpage? :cake: :wine_glass:
 
 
 Your `package.json` should look something like this (no babel, no webpack :see_no_evil:):
@@ -53,6 +55,9 @@ Your `package.json` should look something like this (no babel, no webpack :see_n
 ![nay who needs image descriptions](https://lh3.googleusercontent.com/pGRf6tiQlR2MT5rdERBieRW8vbRqd8d_HDEuoHyIMY7Y6EhnmedZJlnFEfnrdqpIh2JgIrFn61Fu "asd")
 
 :mag_right: You should be most interested with the build folder containing those files:
+
+> *You could most certainly use a better build name though. "DefaultWebGL", really? :hear_no_evil:
+
 ![enter image description here](https://lh3.googleusercontent.com/8RPc5jCsz49qIKGjSb-6uhIqgycsVlguKvMGjzH7A9oLtbJVgtU99vhz09ZLy7xVNVuHL3bXIm5Y "cool stuff")
-You could most certainly use a better build name.
+
 > Written with [StackEdit](https://stackedit.io/).
