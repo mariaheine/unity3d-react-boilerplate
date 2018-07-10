@@ -4,7 +4,7 @@ Boilerplate for Unity3D WebGL builds (on WebAssembly) using basic Create React A
 ## What I wanna do here
 Prepare an easy to use boilerplate for Unity WebGL builds in react. Which also shows you step by step how to do it on your own.
  - [x] Prepare basic webproject: Running Create React App
- - [ ] [Make basic unity WebGL build](#2.-build-unity-project-for-webgl)
+ - [ ] [Make basic unity WebGL build](#2-build-unity-project-for-webgl)
  - [ ] Implement crucial repo for this project: [react-unity-webgl](https://github.com/jeffreylanters/react-unity-webgl)
  - [ ] Introducing basic communication between React and Unity build
  - [ ] Hosting on Heroku
