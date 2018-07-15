@@ -28,9 +28,8 @@ class App extends Component {
 
   onClick() {
     this.unityContent.send(
-      "TextDisplayer", 
-      "UpdateMousePosition", 
-      20
+      "Cube (1)", 
+      "Randomize"
     );
   }
 
@@ -53,7 +52,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         {this.state.isLoading === true && <div>{"Loading..."}</div>}
-        <button onClick={this.onClick.bind(this)}>Spawn!</button>
+        <button onClick={this.onClick.bind(this)}>Randomize!</button>
         <Unity unityContent={this.unityContent} />
         <h1>{ x }</h1>
         <h1>{ y }</h1>
