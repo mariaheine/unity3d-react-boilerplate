@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33028682289500968}
   - component: {fileID: 23321625817681376}
   - component: {fileID: 65242620605891930}
+  - component: {fileID: 114151403717099716}
   m_Layer: 0
   m_Name: Cookie
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 8bb54f53ccbf67d4a9da48eb8c656a58, type: 2}
+  - {fileID: 2100000, guid: bc71749e9e84f864186142469ae97ab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,8 +92,19 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531787600911502}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114151403717099716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1531787600911502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951b3505f9432f04398f7c14acfbc65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

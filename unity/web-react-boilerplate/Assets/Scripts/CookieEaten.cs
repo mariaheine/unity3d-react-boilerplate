@@ -16,7 +16,6 @@ public class CookieEaten : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log(col.gameObject);
         Destroy(gameObject);
     }
 }
