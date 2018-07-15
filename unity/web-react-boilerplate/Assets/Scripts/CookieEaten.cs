@@ -1,21 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class CookieEaten : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [DllImport("ReactEvents")]
+    private static extern void CookieEatenEvent();
 
     void OnTriggerEnter(Collider col)
     {
+        CookieEatenEvent();
         Destroy(gameObject);
     }
 }

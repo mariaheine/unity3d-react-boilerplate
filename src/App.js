@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       x: 0,
       y: 0,
-      isLoading: true
+      isLoaded: false
     };
 
     this.unityContent = new UnityContent(
@@ -21,14 +21,18 @@ class App extends Component {
 
     this.unityContent.on("loaded", () => {
       this.setState({
-        isLoading: false
+        isLoaded: true
       });
+    });
+
+    this.unityContent.on("CookieEaten", () => {
+      console.log("cookie yummy");
     })
   }
 
   onClick() {
     this.unityContent.send(
-      "Cube (1)", 
+      "FlyCube", 
       "Randomize"
     );
   }
@@ -43,6 +47,8 @@ class App extends Component {
   // }
 
   render() {
+    
+
     const { x, y} = this.state;
     // onMouseMove={this._onMouseMove.bind(this)}
     return (
@@ -51,11 +57,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        {this.state.isLoading === true && <div>{"Loading..."}</div>}
-        <button onClick={this.onClick.bind(this)}>Randomize!</button>
-        <Unity unityContent={this.unityContent} />
-        <h1>{ x }</h1>
-        <h1>{ y }</h1>
+        <div className="App-container">
+          <button onClick={this.onClick.bind(this)}>Randomize!</button>
+          <Unity unityContent={this.unityContent} width="1024px" height="576px"/>
+        </div>
+        <div className="App-footer">
+          {this.state.isLoaded === false && <div>{"Loading..."}</div>}
+        </div>
       </div>
     );
   }
