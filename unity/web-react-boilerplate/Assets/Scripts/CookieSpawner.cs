@@ -13,20 +13,23 @@ public class CookieSpawner : MonoBehaviour {
     public GameObject cookie;
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Awake () {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.V))
-            SpawnCube();
+            SpawnCube(1);
     }
 
-    public void SpawnCube()
+    public void SpawnCube(int count)
     {
-        Vector3 position = new Vector3(Random.Range(minX,maxX), constY, Random.Range(minZ,maxZ));
-        Instantiate(cookie, position, Quaternion.identity);
+        for (int i = 0; i < count; i++)
+        {
+            Vector3 position = new Vector3(Random.Range(minX, maxX), constY, Random.Range(minZ, maxZ));
+            Instantiate(cookie, position, Quaternion.identity);
+        }
     }
 }

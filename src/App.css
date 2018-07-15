@@ -2,6 +2,10 @@ html, body {
   background-color: #222;
 }
 
+p {
+  color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -28,6 +32,35 @@ html, body {
 .App-container {
   display:flex;
   justify-content: center;
+}
+
+.App-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 15vw;
+}
+
+.App-panel button {
+  width: 100%;
+}
+
+.Panel-score {
+  width: 100%;
+}
+
+.Panel-spawner {
+  padding:5px;
+  display: flex;
+  width: 100%;
+}
+
+.Panel-spawner input, button {
+  width: 50%;
+}
+
+.Panel-loader {
 }
 
 .App-footer {

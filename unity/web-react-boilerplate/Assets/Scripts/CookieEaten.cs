@@ -3,12 +3,15 @@ using System.Runtime.InteropServices;
 
 public class CookieEaten : MonoBehaviour {
 
-    [DllImport("ReactEvents")]
+    [DllImport("__Internal")]
     private static extern void CookieEatenEvent();
 
     void OnTriggerEnter(Collider col)
     {
-        CookieEatenEvent();
+
+        #if !UNITY_EDITOR && UNITY_WEBGL
+            CookieEatenEvent();
+        #endif
         Destroy(gameObject);
     }
 }
