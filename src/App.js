@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Unity, { UnityContent } from "react-unity-webgl";
 
-
-import RandomColourButton from './content/PanelComponents/RandomColourButton.js'
 import Panel from './content/Panel.js'
 
 import logo from './logo.svg';
@@ -13,8 +11,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      x: 0,
-      y: 0,
       isLoaded: false
     };
 
@@ -43,10 +39,7 @@ class App extends Component {
     };  
   }
 
-  render() {
-
-    const { x, y } = this.state;
-    
+  render() {    
     return (
       <div className="App" onMouseMove={this._onMouseMove.bind(this)} >
         <header className="App-header">

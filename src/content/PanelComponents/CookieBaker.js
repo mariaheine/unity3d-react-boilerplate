@@ -26,7 +26,7 @@ class CookieBaker extends Component {
 
   _onSpawnerCountChange = (event) => {
     this.setState({
-      cookieSpawnQuantity: parseInt(event.target.value)
+      cookieSpawnQuantity: parseInt(event.target.value, 10)
     });
   }
 
