@@ -1,8 +1,16 @@
+
 # Unity3D-React-Boilerplate
-Example project / tutorial for hosting Unity3D WebGL build as a static webpage on Heroku (using create-react-app).
+![enter image description here](https://lh3.googleusercontent.com/bCHwvLd87csFVIUVL_n6dJVh4eHB8yfNXfruyyQHyLcIpGto02edFrzR7xTH5B60964SyTIBilo "Example project picture")
 
-### How to recreate:
 
+👽✨🌊
+
+- Example project / tutorial for hosting Unity3D WebGL build as a static webpage on Heroku (using create-react-app).
+-  **Test [here](https://unity3d-react-boilerplate.herokuapp.com/).**
+
+👽✨🌊
+
+## How to recreate
 1. [Initial project setup](#initial-project-setup)
 2. [Build Unity project for WebGL](#build-unity-project-for-webgl)
 3. [Integrate Unity build into your react webapp](#integrate-unity-build-into-your-react-webapp)
@@ -121,7 +129,7 @@ this.props.unityContent.send(
    10
 );
 ```
-:warning: It seems cannot directly use template literals when passing a string. Write it first to a variable, then pass it instead. 
+:warning: You cannot directly use template literals when passing a string. Write it first to a variable, then pass it instead. 
  ```javascript
  let  mouseCoords  =  `${this.state.pageX}  ${this.state.pageY};
  
