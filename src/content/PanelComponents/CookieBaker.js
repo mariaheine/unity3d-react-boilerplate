@@ -5,13 +5,21 @@ class CookieBaker extends Component {
 		super(props);
 
 		this.state = {
-    		cookieSpawnQuantity: 1
+    		cookieSpawnQuantity: 100
     };
 
     props.unityContent.on("CookieEatenEvent", () => {
     	this.setState((prevState) => ({
      		cookiesEaten: prevState.cookiesEaten + 1
     	}))
+    })
+
+    props.unityContent.on("loaded", () => {
+    	this.props.unityContent.send(
+        "PlayArea", 
+        "SpawnCube",
+        15
+      );
     })
 	}
 
@@ -54,7 +62,7 @@ class CookieBaker extends Component {
           onClick={this._onSpawnerCountClick}
           onChange={this._onSpawnerCountChange}/>
 
-        <button onClick={this._onClickSpawn.bind(this)}>Get cookies!</button>       
+        <button className="whiteButton" onClick={this._onClickSpawn.bind(this)}>Get cookies!</button>       
       </div>
 		);
 	}

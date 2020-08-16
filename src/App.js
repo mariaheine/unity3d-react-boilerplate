@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Unity, { UnityContent } from "react-unity-webgl";
-import Panel from './content/Panel.js'
-import logo from './logo.svg';
-import './App.css';
+import Panel from "./content/Panel.js";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -13,43 +12,45 @@ class App extends Component {
     };
 
     this.unityContent = new UnityContent(
-      "UnityBuild4/UnityBuild4.json",
-      "UnityBuild4/UnityLoader.js"
+      "CookieEater/Build/CookieEater.json",
+      "CookieEater/Build/UnityLoader.js"
     );
 
     this.unityContent.on("loaded", () => {
-        // WELL DON'T COUNT ON THIS
-        this.setState({
-          isLoaded: true
-        });
+      this.setState({
+        isLoaded: true,
+      });
     });
   }
 
-  _onMouseMove(e) {
+  onMouseMove(e) {
     let mouseCoords = `${e.pageX} ${e.pageY}`;
 
-    if(this.state.isLoaded === true) {
+    if (this.state.isLoaded === true) {
       this.unityContent.send(
-        "TextDisplayer", 
+        "TextDisplayer",
         "UpdateDoubleMousePosition",
         mouseCoords
       );
-    };  
+    }
   }
 
-  render() {    
-    return (
-      <div className="App" onMouseMove={this._onMouseMove.bind(this)} >
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <div className="App-container">
-          
-          <Panel unityContent={this.unityContent}/>
-          <Unity unityContent={this.unityContent} width="1024px" height="576px"/>
+  render() {
+    var contents = this.state.isLoaded ? (
+      <div>
+        <Panel unityContent={this.unityContent} />
+        <div className="App-info">
+          <p>Use WSAD keys to fly around.</p>
+        </div>
+      </div>
+    ) : <div className="App-intro"><h1>Loading</h1></div>;
 
-        </div>        
+    return (
+      <div className="App" onMouseMove={this.onMouseMove.bind(this)}>
+        <div className="App-container">
+          <Unity unityContent={this.unityContent} width="100%" height="100%" />
+          {contents}
+        </div>
       </div>
     );
   }

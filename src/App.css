@@ -1,5 +1,6 @@
 html, body {  
-  background-color: #222;
+  background-color: #2D2B36;
+  overflow: hidden;
 }
 
 p {
@@ -20,7 +21,7 @@ p {
 .App-header {
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 
 .App-title {
@@ -28,20 +29,42 @@ p {
 }
 
 .App-intro {
+  position: absolute;
+  top: 45vh;
   font-size: large;
+  color: white;
+  width: 40vw;
+  height: 20vh;
 }
 
 .App-container {
   display:flex;
   justify-content: center;
+  height: 100%;
 }
 
 .App-panel {
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   width: 15vw;
+  height: 15vh;
+}
+
+.App-info {
+  position: absolute;
+  right: 1vw;
+  top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 15vw;
+  height: 15vh;
 }
 
 .App-panel button {
@@ -61,6 +84,31 @@ p {
 .Panel-spawner input, button {
   width: 50%;
 }
+
+.whiteButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	/* background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%); */
+  background-color:#ffffff;
+	border-radius:2px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	/* font-weight:bold; */
+  padding:3px 6px;
+  margin-left: 2px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.whiteButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.whiteButton:active {
+	position:relative;
+	top:1px;
+}
+
 
 .Panel-loader {
 }
