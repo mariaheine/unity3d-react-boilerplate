@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Unity, { UnityContent } from "react-unity-webgl";
-
 import Panel from './content/Panel.js'
-
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,8 +13,8 @@ class App extends Component {
     };
 
     this.unityContent = new UnityContent(
-      "UnityBuild/Build/UnityBuild2.json",
-      "UnityBuild/Build/UnityLoader.js"
+      "UnityBuild4/UnityBuild4.json",
+      "UnityBuild4/UnityLoader.js"
     );
 
     this.unityContent.on("loaded", () => {

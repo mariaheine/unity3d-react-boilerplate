@@ -1,35 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CookieSpawner : MonoBehaviour {
+public class CookieSpawner : MonoBehaviour
+{
+    [SerializeField] GameObject cookiePrefab;
+    [SerializeField] float spawnHeight = 1.56f;
+    [SerializeField] Vector4 spawnBounds = new Vector4(-3f, 3f, -7f, -2f);
 
-    float constY = 1.56f;
-    float minX = -3.0f;
-    float maxX = 3.0f;
-    float minZ = -7.0f;
-    float maxZ = -2.0f;
-
-    public GameObject cookie;
-
-    // Use this for initialization
-    void Awake () {
-        
-    }
-
-    // Update is called once per frame
+#if UNITY_EDITOR
     void Update()
     {
+        // -------------
+        
+        // Test cookie spawning with V key
         if (Input.GetKey(KeyCode.V))
+        {
             SpawnCube(1);
+        }
+        
+        // -------------
     }
+#endif
 
     public void SpawnCube(int count)
     {
+        // -------------
+        
         for (int i = 0; i < count; i++)
         {
-            Vector3 position = new Vector3(Random.Range(minX, maxX), constY, Random.Range(minZ, maxZ));
-            Instantiate(cookie, position, Quaternion.identity);
+            // Vector3 position = new Vector3(Random.Range(minX, maxX), constY, Random.Range(minZ, maxZ));
+            float randomX = Random.Range(spawnBounds.x, spawnBounds.y);
+            float randomZ = Random.Range(spawnBounds.z, spawnBounds.w);
+            Vector3 position = new Vector3(randomX, spawnHeight, randomZ);
+            Instantiate(cookiePrefab, position, Quaternion.identity);
         }
+        
+        // -------------
     }
 }
