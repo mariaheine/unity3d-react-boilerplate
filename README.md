@@ -4,15 +4,10 @@
 
 ## TLDR; see result [_here_](https://unity3d-react-boilerplate.herokuapp.com/) 🐇
 
----
-
-👽✨🌊
 
 - Example project / tutorial for hosting Unity3D WebGL build as a static webpage on Heroku (using create-react-app).
 - Using a super cool repo [react-unity-webgl](https://github.com/elraccoone/react-unity-webgl) by [@El Raccoone](https://github.com/elraccoone)
 - Targetted especially for unity3d people who haven't hosted a webapp before.
-
-👽✨🌊
 
 ## How to recreate
 
@@ -90,11 +85,11 @@ Your `package.json` should look something like this (no babel, no webpack config
 
 ## 3. Integrate Unity build into your react webapp
 
-- 🌸 Add [react-unity-webgl](https://github.com/jeffreylanters/react-unity-webgl) into your project, _it's just so cool._
+- Add [react-unity-webgl](https://github.com/jeffreylanters/react-unity-webgl) into your project, _it's just so cool._
 
-- 🌷 Copy entire Unity build folder (mentioned above) into your `public` webapp folder.
+- Copy entire Unity build folder (mentioned above) into your `public` webapp folder.
 
-- 🌺 Replace your `App.js` with [quick start code](https://github.com/jeffreylanters/react-unity-webgl/wiki/Quick-Start-Guide) from react-unity-webgl
+- Replace your `App.js` with [quick start code](https://github.com/jeffreylanters/react-unity-webgl/wiki/Quick-Start-Guide) from react-unity-webgl
 
 In case of this example project it would be just:
 
@@ -124,7 +119,7 @@ With barely 5 lines of code your Unity build is imported and served in your Reac
 
 For more info about `<UnityContent/>` component check out [Mr. Lanters' github wiki](https://github.com/jeffreylanters/react-unity-webgl/wiki/Unity-Content)
 
-## 3. 💨 React to Unity communication
+## 3. React to Unity communication
 
 ---
 
@@ -190,18 +185,16 @@ public void UpdateDoubleMousePosition(string mouseCoords)
 }
 ```
 
-## 4. 📘 Unity to React communication
+## 4. Unity to React communication
 
 ---
 
-4 steps for every single call:
+3 steps for every single call:
 
-pre. creating .jslib plugin
-
-2. creating javscript event handler
-1. adding a method binding to the .jslib script
-3. importing the 'function frame' in a unity c# script
-4. calling that function
+0. pre: [creating .jslib plugin](#creating-.jslib-plugin)
+1. [Creating javascript event handler](#Creating-javascript-event-handler)
+2. [Adding the method binding to the .jslib script](#Adding-the-method-binding-to-the-.jslib-script)
+3. [Importing and using the method binding in a unity c# script](#Importing-and-using-the-method-binding-in-a-unity-c#-script)
 
 ### Creating .jslib plugin
 ---
