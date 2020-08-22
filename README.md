@@ -24,7 +24,13 @@
 
 ## 0. How to run
 
-asdfas
+You will need to have [yarn](https://github.com/yarnpkg/yarn) installed on your pc
+
+    $ git clone https://github.com/mariaheine/unity3d-react-boilerplate.git
+    $ yarn install
+    $ yarn start
+
+This will let you locally run example project.
 
 ## 1. Initial project setup
 
