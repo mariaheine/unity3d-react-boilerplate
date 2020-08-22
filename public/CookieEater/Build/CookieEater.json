@@ -5,7 +5,7 @@
 "dataUrl": "CookieEater.data.unityweb",
 "wasmCodeUrl": "CookieEater.wasm.code.unityweb",
 "wasmFrameworkUrl": "CookieEater.wasm.framework.unityweb",
-"graphicsAPI": ["WebGL 2.0"],
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
 "backgroundColor": "#2D2B36",

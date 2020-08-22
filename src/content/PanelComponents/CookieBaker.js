@@ -23,29 +23,29 @@ class CookieBaker extends Component {
     })
 	}
 
-  // React to Unity II
-  // A bit more advanced example that sends numerical parameter along with the function call
-  _onSpawnerCountClick = (event) => {
+  // Without it keyboard signals would be consumed by unity and we wouldn't be able
+  // to type in the cookie spawn count. Afterwards we need to unlock it so we can
+  // controll the flying cube. For more see WebGLInputManager.cs script
+  onSpawnerCountClick = () => {
     this.props.unityContent.send(
       "ReactToUnityManager", 
       "LockWebGLInput"
     );
   }
 
-  _onSpawnerCountChange = (event) => {
+  onSpawnerCountChange = (event) => {
     this.setState({
       cookieSpawnQuantity: parseInt(event.target.value, 10)
     });
   }
 
-  _onClickSpawn() {
+  onClickSpawn = () => {
     this.props.unityContent.send(
       "PlayArea", 
       "SpawnCube",
       this.state.cookieSpawnQuantity
     );
 
-    // Without it keyboard signals would be consumed by unity
     this.props.unityContent.send(
       "ReactToUnityManager", 
       "UnlockWebGLInput"
@@ -59,10 +59,10 @@ class CookieBaker extends Component {
         <input 
           type="number" 
           value={this.state.cookieSpawnQuantity} 
-          onClick={this._onSpawnerCountClick}
-          onChange={this._onSpawnerCountChange}/>
+          onClick={this.onSpawnerCountClick}
+          onChange={this.onSpawnerCountChange}/>
 
-        <button className="whiteButton" onClick={this._onClickSpawn.bind(this)}>Get cookies!</button>       
+        <button className="whiteButton" onClick={this.onClickSpawn.bind(this)}>Get cookies!</button>       
       </div>
 		);
 	}
