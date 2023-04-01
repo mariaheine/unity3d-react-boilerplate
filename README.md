@@ -1,6 +1,6 @@
 # Unity3D-React-Boilerplate
 
-*please note i haven't been using neither react nor react-unity-webgl in a while so this thing might be heavily outdated, good luck!*
+### 🦧 *please note i haven't been using neither react nor react-unity-webgl in a while so this thing might be heavily outdated, good luck!*
 
 ![Image showing a screenshot from the ](./public/docs/header-image.png "Example project picture")
 
